@@ -42,13 +42,12 @@ public class Main {
 //        System.out.println("grades after reverseArray():" + Arrays.toString(grades));
 //        reverseArray(grades);
 //        System.out.println("grades after reversal back to normal:" + Arrays.toString(grades));
-
-
     }
 
-    // This method has one reference parameter - and array called numbers
-    // It will receive a reference to an Array object, and can access the
-    // array elements using the parameter name.
+    // This method has one reference parameter called numbers.
+    // We say that it receives an array of ints, but more precisely
+    // "numbers" receives a reference to the grades array - not the actual array object.
+    // Using "numbers", we can access the elements in the grades array.
     //
     public static void displayArray(int[] numbers) {
         System.out.println("\nArray Contents and index:");
@@ -75,7 +74,6 @@ public class Main {
 //        ToDo rewrite this code using enhanced for loop
     }
 
-
     public static double calculateAverage(int[] numbers) {
         int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -87,7 +85,6 @@ public class Main {
 //        {
 //            sum += number;
 //        }
-
         return (double) sum / numbers.length;  //cast to double to prevent integer division
     }
 }
